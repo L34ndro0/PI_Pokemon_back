@@ -17,12 +17,15 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-
+const saveApiData = require('./src/controllers/saveApiData')
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: true }).then(async() => {
+  console.log('DB conectada');
+  await saveApiData();
   server.listen(3001, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log('server listening at 3001'); // eslint-disable-line no-console
   });
 });
