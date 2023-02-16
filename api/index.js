@@ -20,11 +20,11 @@
 
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const saveApiData = require('./src/controllers/saveApiData')
+const getApiTypes = require('./src/handlers/getApiTypes')
 // Syncing all the models at once.
 conn.sync({ force: true }).then(async() => {
   console.log('DB conectada');
-  await saveApiData();
+  await getApiTypes();   
   server.listen(3001, () => {
     console.log('server listening at 3001'); // eslint-disable-line no-console
   });
