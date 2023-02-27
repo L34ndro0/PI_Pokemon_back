@@ -66,7 +66,7 @@ export default function Home () {
     return (        
         <div className={styles.home}>
             
-            <nav className={styles.searchBar}>
+            <div className={styles.searchBar}>
 
                 <div className={styles.searchBar_black}>
                     <div className={styles.container_ord_filt}>                    
@@ -103,9 +103,9 @@ export default function Home () {
                                 <label className={styles.etiquetas_ord_filt} >por tipo:    </label>
                                 <select className={styles.select_ord_filt} onChange={event => handleFilterTypes(event) }>    
                                     <option value="All">All</option>
-                                    {allTypes?.map((type) => {
+                                    {allTypes?.map((type,index) => {
                                         return(
-                                            <option value={type.nombre}>{type.nombre}</option>
+                                            <option value={type.nombre} key={index}>{type.nombre}</option>
                                         )
                                     })}
                                 </select>
@@ -122,7 +122,7 @@ export default function Home () {
                         <SearchBar/>       
                     </div>                
                 </div>                
-            </nav>
+            </div>
             
             <div>                
                 <div className={styles.paginado}> 

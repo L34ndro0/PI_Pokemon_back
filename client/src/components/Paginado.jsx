@@ -20,8 +20,8 @@ export default function paginated ({pokemonsPerPage, allPokemons, paginado, curr
             <ul >
                 <li className={styles.paginas} value='prev' onClick={(event) => handleArrows(event)}> Pagina previa! </li>
                 { 
-                pageNumbers?.map(page => (                                                
-                        <li className={page === currentPage ? styles.paginaActual : styles.paginas} onClick={() => paginado(page)}>{page}</li>                        
+                pageNumbers?.map((page,index) => (                                                
+                        <li key={index} className={page === currentPage ? styles.paginaActual : styles.paginas} onClick={() => paginado(page)}>{page}</li>                        
                     ))
                 }
                 <li className={styles.paginas} value='next' onClick={(event) => handleArrows(event)}> Siguiente pagina! </li>
