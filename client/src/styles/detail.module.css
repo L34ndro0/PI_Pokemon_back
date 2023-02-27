@@ -1,4 +1,21 @@
-    
+.loading{
+    padding-top: 250px;
+}
+
+.loading_image{
+    width: 10%;
+    height: 10%;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+}
+
+.loading_texto{
+    display: inline-block;
+    font-size: 28px;
+    letter-spacing: 2px;
+} 
+
 .pokemon_card_container {
     display: block;
     position: relative;

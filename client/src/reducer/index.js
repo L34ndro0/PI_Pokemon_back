@@ -99,6 +99,12 @@ function rootReducer(state = initialState, action){
                 ...state,
                 pokemons: state.allPokemons
             }
+
+        case 'CLEAR_DETAIL_STATE':
+            return{
+                ...state,
+                details:[]
+            }    
             
         default: 
             return state;

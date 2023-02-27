@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { postPokemon } from '../actions/index'
+import { postPokemon , getPokemons} from '../actions/index'
 import styles from '../styles/pokemonCreate.module.css'
 
 function validate(input){
@@ -85,6 +85,7 @@ export default function PokemonCreate () {
             createInDb:"",
             type:[]
         })
+        dispatch(getPokemons())
     }
 
     return(

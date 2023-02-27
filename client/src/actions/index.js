@@ -91,3 +91,10 @@ export function showAllPokemons(payload) {
         payload
     })
 }
+
+export function clearDetailState(payload) {
+    return({
+        type: 'CLEAR_DETAIL_STATE',
+        payload
+    })
+}

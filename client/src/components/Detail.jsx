@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getDetail } from "../actions";
+import { getDetail , clearDetailState } from "../actions";
 import styles from '../styles/detail.module.css'
 
 
@@ -12,7 +12,17 @@ export default function Details(props){
     
     useEffect(()=> {
         dispatch(getDetail(props.match.params.idPokemon))
+        return dispatch(clearDetailState())
     },[dispatch,props.match.params.idPokemon])
+
+    if (!pokemon.id) {
+        return (
+            <div className={styles.loading}>
+                <img className={styles.loading_image} src="https://usagif.com/wp-content/uploads/loading-6.gif" alt="" />
+                <h1 className={styles.loading_texto}>loading...</h1>
+            </div>
+        )
+    }
 
     return (
         <div className={styles.pokemon_card_container}>

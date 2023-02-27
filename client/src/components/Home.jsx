@@ -53,7 +53,17 @@ export default function Home () {
         setCurrentPage(1);
     }
     
-    return (
+    if (!currentPokemons.length) {
+        return (
+            <div className={styles.loading}>
+                <img className={styles.loading_image} src="https://usagif.com/wp-content/uploads/loading-6.gif" alt="" />
+                <h1 className={styles.loading_texto}>loading...</h1>
+            </div>
+        )
+    }
+    
+   
+    return (        
         <div className={styles.home}>
             
             <nav className={styles.searchBar}>
@@ -65,6 +75,7 @@ export default function Home () {
                             <div>
                             <label className={styles.etiquetas_ord_filt}> por nombre: </label>
                                 <select className={styles.select_ord_filt} onChange={event => handleOrderName(event)}>
+                                    <option value="seleccionar">Seleccionar</option>
                                     <option value="ascendente">A-Z</option>
                                     <option value="descendente">Z-A</option>
                                 </select>
@@ -72,6 +83,7 @@ export default function Home () {
                             <div>
                             <label className={styles.etiquetas_ord_filt}> por ataque: </label>    
                             <select className={styles.select_ord_filt} onChange={event => handleOrderAtack(event)}>
+                                <option value="seleccionar">Seleccionar</option>
                                 <option value="ascendente">Menor a Mayor</option>
                                 <option value="descendente">Mayor a Menor</option>
                             </select>
