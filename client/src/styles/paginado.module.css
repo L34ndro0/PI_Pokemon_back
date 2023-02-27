@@ -8,3 +8,11 @@
     position: relative;
     top: -2px;
 }
+
+.paginaActual{
+    display: inline-block;
+    margin: 5px;    
+    cursor: pointer;
+    width: 15px;
+    background-color: chocolate;
+}

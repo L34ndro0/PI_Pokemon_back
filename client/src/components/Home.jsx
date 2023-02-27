@@ -127,7 +127,7 @@ export default function Home () {
             <div>                
                 <div className={styles.paginado}> 
                     <p>Paginas!</p>            
-                    <Paginado className={styles.paginado} pokemonsPerPage= {pokemonsPerPage} allPokemons={allPokemons.length} paginado={paginado} />                
+                    <Paginado className={styles.paginado} pokemonsPerPage= {pokemonsPerPage} allPokemons={allPokemons.length} paginado={paginado} currentPage={currentPage}/>                
                 </div>                
                 
                 <div className={styles.containerCards}>
