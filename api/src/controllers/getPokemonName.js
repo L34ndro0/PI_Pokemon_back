@@ -6,7 +6,7 @@ const getPokemonName = async (name) => {
         
         let allPokemon = []
         let apiPoke = await getApiPokemonsName(name.toLowerCase())
-        if (apiPoke.message) apiPoke=[]
+        if (apiPoke.message) apiPoke = []
         
         let pokeDb  = await Pokemon.findAll({where: {nombre: name.toLowerCase()}, include: {model: Type, attributes: ["nombre"], through: { attributes: [],},},})
         
@@ -19,7 +19,7 @@ const getPokemonName = async (name) => {
         }
 
     } catch (error) {
-        return error.message
+        return [error.message]
     }
 
 }

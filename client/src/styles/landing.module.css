@@ -1,0 +1,32 @@
+.container{
+    min-height: 100vh;    
+    min-width: 100vh;  
+    background-image: url('https://www.fayerwayer.com/resizer/9RWJiyDep8uFH9dMIlkaf-Gi_CI=/1440x1080/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/ZOP2OEAULVFUJJIZCFHWIZP5XM.jpeg'); 
+    background-size: 100% 100%; 
+     
+}
+
+.container h1 {
+    color: gold;
+    -webkit-text-stroke: 1px blue;
+    font-size: 56px;
+}
+
+.container a {
+    position: absolute;
+    bottom: 20%;
+    left: 42%;
+    cursor: pointer;
+}
+
+.container button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 50px;
+    width: 200px;
+    background: #f6fe00;
+    background-image: -webkit-linear-gradient(top, brown, orange);
+    border-radius: 28px; 
+    border: none;
+    cursor: pointer;
+}
+

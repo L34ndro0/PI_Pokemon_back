@@ -1,0 +1,37 @@
+.card{
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 145, 71));
+}
+
+.content {
+    background: linear-gradient(to left,brown, rgb(214, 71, 71));
+    border-radius: 10px;
+}
+
+.imagen{
+    width: 150px;
+    height: 150px;    
+    align-self: center;       
+}
+
+.nombre{
+    color: black;
+    background: #ffd700a6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    letter-spacing: 2px;       
+    font-weight: lighter;
+}
+
+.type{
+    position: relative;
+    top: 40px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
