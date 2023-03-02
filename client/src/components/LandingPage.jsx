@@ -15,7 +15,7 @@ export default function LandingPage(){
     
     return(
         <div className={styles.container}>
-            <h1>Bienvenidos a Pokepedia</h1>
+            <h1>Bienvenidos a Pokemon Cards</h1>
             <Link to ='/home'>
                 <button>Ingresar</button>
             </Link>

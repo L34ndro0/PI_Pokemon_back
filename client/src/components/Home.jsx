@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import { orderPokemonByAtack ,  filterByTypes, filterByOrigin, orderPokemonByName } from "../actions";
+import { orderPokemonByAtack ,  filterByTypes, filterByOrigin, orderPokemonByName,setCurrentPage } from "../actions";
 import {Link} from 'react-router-dom';
 import Card from "./Card";
 import Paginado from "./Paginado";
@@ -14,14 +14,14 @@ export default function Home () {
     const allPokemons = useSelector((state) => state.pokemons)
     const allTypes = useSelector((state) => state.types)
     const [order ,SetOrder] = useState('')
-    const [currentPage, setCurrentPage] = useState(1);
+    const currentPage = useSelector((state) => state.currentPage)
     const [pokemonsPerPage] = useState(12);   
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon,indexOfLastPokemon) 
 
     const paginado = (pageNumber) => {
-        setCurrentPage(pageNumber)
+        dispatch( setCurrentPage(pageNumber));
     }    
     
     useEffect ( () => {                
