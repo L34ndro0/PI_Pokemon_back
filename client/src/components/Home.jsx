@@ -33,24 +33,24 @@ export default function Home () {
     function handleOrderAtack(event){        
         console.log(order)
         dispatch(orderPokemonByAtack(event.target.value))
-        setCurrentPage(1);
+        dispatch( setCurrentPage(1))
         SetOrder(`Ordenando ${event.target.value}`)
     }
 
     function handleOrderName(event){
         dispatch(orderPokemonByName(event.target.value))
-        setCurrentPage(1)
+        dispatch( setCurrentPage(1))
         SetOrder(`Ordenando ${event.target.value}`)
     }
 
     function handleFilterTypes(event){
         dispatch(filterByTypes(event.target.value))
-        setCurrentPage(1);
+        dispatch( setCurrentPage(1))
     }
 
     function handleFilterByOrigin(event) {
         dispatch(filterByOrigin(event.target.value))
-        setCurrentPage(1);
+        dispatch( setCurrentPage(1))
     }
     
     if (!currentPokemons.length) {

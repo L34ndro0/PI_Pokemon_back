@@ -5,7 +5,7 @@ const getApiPokemons = async () => {
         let i = 1;
         const pokemons = [];        
 
-        while (i < 200 ) {
+        while (i < 50 ) {
             
             pokemons.push(axios(`https://pokeapi.co/api/v2/pokemon/${i}/`));
             i++;            

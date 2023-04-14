@@ -47,6 +47,7 @@ export default function PokemonCreate () {
     }
 
     function handleSelect(event){
+        if (input.type.includes(event.target.value)) return
         setInput({
             ...input,
             type: [...input.type,event.target.value]
@@ -148,6 +149,7 @@ export default function PokemonCreate () {
                         {errors.imagen && (<span className={styles.errors} >{errors.imagen}</span>)}
                         {errors.valores && (<span className={styles.errors} >{errors.valores}</span>)}
                         {errors.type && (<span className={styles.errors} >{errors.type}</span>)}
+                        {errors.duplicate && (<span className={styles.errors} >{errors.duplicate}</span>)}                        
                 </div>
             </form>
             <Link to='/home' className={styles.container_btn}><button className={styles.btn_volver} >Volver</button></Link>
