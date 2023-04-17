@@ -21,11 +21,12 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const getApiTypes = require('./src/handlers/getApiTypes')
+const port = process.env.PORT || 3001;
 // Syncing all the models at once.
 conn.sync({ force: true }).then(async() => {
   console.log('DB conectada');
   await getApiTypes();   
   server.listen(3001, () => {
-    console.log('server listening at 3001'); // eslint-disable-line no-console
+    console.log(`server listening at ${port}`); // eslint-disable-line no-console
   });
 });
