@@ -27,6 +27,6 @@ conn.sync({ force: true }).then(async() => {
   console.log('DB conectada');
   await getApiTypes();   
   server.listen(3001, () => {
-    console.log(`server listening at ${port}`); // eslint-disable-line no-console
+    console.log(`server listening at ${port}`); // eslint-disable-line no-consolee
   });
 });
